@@ -9,7 +9,7 @@ class JST::Aggregator
 
   def aggregate
     <<-JST
-      (function() {
+      ;(function() {
         this.Templates = {};
         #{process_all}
       }).call(this);
