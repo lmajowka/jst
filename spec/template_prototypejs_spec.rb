@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'rspec/its'
 
 describe JST::Template::PrototypeJS do
   subject do
@@ -11,5 +12,5 @@ describe JST::Template::PrototypeJS do
     %(this.Templates["hello"] = function(context){ return new Template(#{template_content.inspect}).evaluate(context); })
   end
 
-  #its(:to_jst){ should eq expected_result }
+  its(:to_jst){ should eq expected_result }
 end
